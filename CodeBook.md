@@ -18,9 +18,10 @@ This variable indicates a type of activity which the subject took. It can take s
 - LAYING.
 
 # 3. the 66 Signals
-The rest of the variables are signals measured by the sensors. The variable names are for example "tBodyAcc-mean()-Y" or "fBodyAccJerk-std()-Z". The component of a variable name represents the content of the measurements:
-- "t" or "f" 
--- indicates if the variable is in a time domain or in a frequency domain.
+The rest of the variables are signals measured by the sensors. The variable names are for example "tBodyAcc-mean()-Y" or "fBodyAccJerk-std()-Z". A variable name consists of four components and each component represents the type of the variables according to the following rule.
+1. "t" or "f" 
+1-1. "t" indicates if the variable is in a time domain.
+1-2. "f" indicates if the variable is in a frequency domain (computed as a fft.)
 - "BodyAcc" indicates that the variable is a body accelearation signal.
 - "GrabityAcc" indicates that the variable is a gravity accelearation signal.
 	- 
