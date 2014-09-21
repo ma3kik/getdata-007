@@ -1,9 +1,9 @@
-## Code Book
+### Code Book
 
 ## Preprocessing
- The Samsung data was downloaded from the course website. Then the train and the test set are combined into one dataset. The column unrelated to a mean or a standard deviation of some observables are excluded. Finally an average of each column is computed for each subject and each activity. 
+ The original data was downloaded from the course website. Then the train and the test set are combined into one dataset. The column unrelated to a mean or a standard deviation of some observables are excluded. Finally an average of each column is computed for each subject and each activity. 
 
-## variables
+## Variables
 
 # 1. subject
 This variable is an identifier of the subject who carried out the experiment.
@@ -18,7 +18,7 @@ This variable indicates a type of activity which the subject took. It can take s
 - LAYING.
 
 # 3. the 66 Signals
-The rest of the variables are signals measured by the sensors. The variable names are for example "tBodyAcc-mean()-Y" or "fBodyAccJerk-std()-Z". A variable name consists of four components and each component represents the type of the variables according to the following rule.
+The rest of the variables are signals measured by the sensors. The variable names are for example "tBodyAcc-mean()-Y" or "fBodyAccJerk-std()-Z". A variable name consists of six components and each component represents the type of the variables according to the following rule.
 * Domain
     * "t" indicates if the variable is in a time domain.
     * "f" indicates if the variable is in a frequency domain (computed as a fft.)
