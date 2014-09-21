@@ -11,12 +11,16 @@ This variable is an identifier of the subject who carried out the experiment.
 # 2. activity
 This variable indicates a type of activity which the subject took. It can take six values:
 - WALKING
-- WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
+- WALKING_UPSTAIRS
+- WALKING_DOWNSTAIRS
+- SITTING
+- STANDING
+- LAYING.
 
 # 3. the 66 Signals
 The rest of the variables are signals measured by the sensors. The variable names are for example "tBodyAcc-mean()-Y" or "fBodyAccJerk-std()-Z". The component of a variable name represents the content of the measurements:
-	- "t" or "f" 
-	-- indicates if the variable is in a time domain or in a frequency domain.
-	- "BodyAcc" indicates that the variable is a body accelearation signal.
-	- "GrabityAcc" indicates that the variable is a gravity accelearation signal.
+- "t" or "f" 
+-- indicates if the variable is in a time domain or in a frequency domain.
+- "BodyAcc" indicates that the variable is a body accelearation signal.
+- "GrabityAcc" indicates that the variable is a gravity accelearation signal.
 	- 
