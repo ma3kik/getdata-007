@@ -2,8 +2,7 @@
 ## Course Project of Getting and Cleaning Data, September 2014
 # This program code reads the train and the test dataset and combines them into one.
 
-# I assume the data files have already been unzipped and stored in the directory below.
-setwd("~/UCI HAR Dataset/")
+# The files are assumed to be stored in the current working directory.
 
 ## Step 1. Merges the training and the test sets to create one data set.
 # First reads the raw data files
@@ -59,6 +58,7 @@ labeledY <- merge(mergedY, activityLabel, by="activityNumber")
 ## Step 4. Appropriately labels the data set with descriptive variable names. 
 colnames(extractedX) <- features$colName[extractedIndex]
         
+
 ## Step 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 colnames(mergedSubj) <- "subject"
 aggregated <- aggregate (extractedX, by=list(mergedSubj$subject, labeledY$activityLabel), FUN=mean)
