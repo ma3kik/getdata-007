@@ -1,5 +1,6 @@
 ## runanalysis.R
-# This program code is reads the train and the test dataset and combines them into one.
+## Course Project of Getting and Cleaning Data, September 2014
+# This program code reads the train and the test dataset and combines them into one.
 
 # I assume the data files have already been unzipped and stored in the directory below.
 setwd("~/UCI HAR Dataset/")
