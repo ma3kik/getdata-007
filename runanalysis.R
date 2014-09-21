@@ -1,10 +1,7 @@
 ## runanalysis.R
-# This program code combines the train and the test dataset into one.
+# This program code is reads the train and the test dataset and combines them into one.
 
-
-
-
-# The data files have already been unzipped and stored in the directory below.
+# I assume the data files have already been unzipped and stored in the directory below.
 setwd("~/UCI HAR Dataset/")
 
 ## Step 1. Merges the training and the test sets to create one data set.
@@ -21,6 +18,8 @@ mergedX <- rbind(trainX, testX)
 mergedSubj <- rbind(trainSubj, testSubj)
 mergedY <- rbind(trainY, testY)
 
+# Remark: I think I should add a column representing if the observation is from the train set or the test set in production.
+# But I did not because there are no instructions in the Course Project.
 
 ## Step 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
 
@@ -39,7 +38,7 @@ extractedStdIndex <- grep("-std\\(\\)", features$colName)
 # merges and sorts the two sets of the indices.
 extractedIndex = sort(c(extractedMeanIndex, extractedStdIndex))
 
-# extracts only the variables relating to a mean or a standard deviation
+# finally extracts only the variables relating to a mean or a standard deviation
 extractedX <- mergedX[, extractedIndex]
 
 
@@ -51,6 +50,8 @@ colnames(mergedY) <- "activityNumber"
 # reads the activity labels from the file.
 activityLabel <- read.table("activity_labels.txt")
 colnames(activityLabel) <- c("activityNumber", "activityLabel")
+
+# combines the activity number data with the activity labels
 labeledY <- merge(mergedY, activityLabel, by="activityNumber")
 
 
